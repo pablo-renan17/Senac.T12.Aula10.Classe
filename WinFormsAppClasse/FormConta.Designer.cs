@@ -34,18 +34,20 @@
             label2 = new Label();
             txtNumeroConta = new TextBox();
             label1 = new Label();
-            listBox1 = new ListBox();
             btnDepositar = new Button();
             btnSacar = new Button();
+            dataGridView1 = new DataGridView();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btnNovaConta
             // 
             btnNovaConta.Font = new Font("Segoe UI", 12F);
-            btnNovaConta.Location = new Point(16, 188);
+            btnNovaConta.Location = new Point(14, 141);
+            btnNovaConta.Margin = new Padding(3, 2, 3, 2);
             btnNovaConta.Name = "btnNovaConta";
-            btnNovaConta.Size = new Size(154, 41);
+            btnNovaConta.Size = new Size(135, 31);
             btnNovaConta.TabIndex = 0;
             btnNovaConta.Text = "Nova conta";
             btnNovaConta.UseVisualStyleBackColor = true;
@@ -58,59 +60,56 @@
             groupBox1.Controls.Add(txtNumeroConta);
             groupBox1.Controls.Add(label1);
             groupBox1.Font = new Font("Segoe UI", 12F);
-            groupBox1.Location = new Point(16, 17);
+            groupBox1.Location = new Point(14, 13);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(482, 165);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(422, 124);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Conta";
             // 
             // txtTitularConta
             // 
-            txtTitularConta.Location = new Point(226, 63);
+            txtTitularConta.Location = new Point(198, 47);
+            txtTitularConta.Margin = new Padding(3, 2, 3, 2);
             txtTitularConta.Name = "txtTitularConta";
-            txtTitularConta.Size = new Size(250, 34);
+            txtTitularConta.Size = new Size(219, 29);
             txtTitularConta.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(222, 33);
+            label2.Location = new Point(194, 25);
             label2.Name = "label2";
-            label2.Size = new Size(148, 28);
+            label2.Size = new Size(117, 21);
             label2.TabIndex = 2;
             label2.Text = "Titular da conta";
             // 
             // txtNumeroConta
             // 
-            txtNumeroConta.Location = new Point(15, 63);
+            txtNumeroConta.Location = new Point(13, 47);
+            txtNumeroConta.Margin = new Padding(3, 2, 3, 2);
             txtNumeroConta.Name = "txtNumeroConta";
-            txtNumeroConta.Size = new Size(173, 34);
+            txtNumeroConta.Size = new Size(152, 29);
             txtNumeroConta.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(11, 33);
+            label1.Location = new Point(10, 25);
             label1.Name = "label1";
-            label1.Size = new Size(165, 28);
+            label1.Size = new Size(131, 21);
             label1.TabIndex = 0;
             label1.Text = "Número da conta";
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(18, 246);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(474, 164);
-            listBox1.TabIndex = 2;
             // 
             // btnDepositar
             // 
             btnDepositar.Font = new Font("Segoe UI", 12F);
-            btnDepositar.Location = new Point(179, 188);
+            btnDepositar.Location = new Point(157, 141);
+            btnDepositar.Margin = new Padding(3, 2, 3, 2);
             btnDepositar.Name = "btnDepositar";
-            btnDepositar.Size = new Size(154, 41);
+            btnDepositar.Size = new Size(135, 31);
             btnDepositar.TabIndex = 3;
             btnDepositar.Text = "Depositar";
             btnDepositar.UseVisualStyleBackColor = true;
@@ -119,28 +118,40 @@
             // btnSacar
             // 
             btnSacar.Font = new Font("Segoe UI", 12F);
-            btnSacar.Location = new Point(339, 188);
+            btnSacar.Location = new Point(297, 141);
+            btnSacar.Margin = new Padding(3, 2, 3, 2);
             btnSacar.Name = "btnSacar";
-            btnSacar.Size = new Size(154, 41);
+            btnSacar.Size = new Size(135, 31);
             btnSacar.TabIndex = 4;
             btnSacar.Text = "Sacar";
             btnSacar.UseVisualStyleBackColor = true;
             btnSacar.Click += btnSacar_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(14, 187);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(418, 150);
+            dataGridView1.TabIndex = 5;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            // 
             // FormConta
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(512, 426);
+            ClientSize = new Size(448, 352);
+            Controls.Add(dataGridView1);
             Controls.Add(btnSacar);
             Controls.Add(btnDepositar);
-            Controls.Add(listBox1);
             Controls.Add(groupBox1);
             Controls.Add(btnNovaConta);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormConta";
             Text = "Cadastro de Conta";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -152,8 +163,8 @@
         private Label label2;
         private TextBox txtNumeroConta;
         private Label label1;
-        private ListBox listBox1;
         private Button btnDepositar;
         private Button btnSacar;
+        private DataGridView dataGridView1;
     }
 }
